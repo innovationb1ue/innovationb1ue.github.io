@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Your Title
-subtitle: This is hexo theme
-author: Your Name
-timezone:
+title: Enjoy the moment 
+subtitle: in the best way you can
+author: Jeff Zhong
+timezone: UTC
 
 # Internationalization (i18n) Setting
 language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
@@ -17,12 +17,11 @@ langselect:
   options: # langselect button display options
     en: English
     cn: 简体中文
-    # tw: 正體中文
 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite-url      # Note: don't forget to modify the CNAME file to your url
+url: http://innovationb1ue.github.io      # Note: don't forget to modify the CNAME file to your url
 root: /
 permalink: :lang/:title/
 permalink_defaults:
@@ -30,19 +29,19 @@ permalink_defaults:
 # CDN Setting
 ## Docs: https://www.jsdelivr.com/?docs=gh
 ## If Github Pages deploy，you can ues jsdelivr settings
-#
+
 # jsdelivr:
-#   jsdelivr_url: https://cdn.jsdelivr.net/gh/
-#   github_username: V-Vincen
+#   jsdelivr_url: https://www.jsdelivr.com/package/npm/gh
+#   github_username: innovationb1ue
 
 
 # Custom Setting Start
 
 # Site settings
-SEOTitle: either thin | or die
-email: hexo-theme-livemylife@gmail.com
-description: "It's an IT blog..."
-keyword: "v-vincen,v-vincen,livemylife,IT  blog,Blog"
+SEOTitle: innovationb1ue blog
+email: realjeffblue@gmail.com
+description: "Record every step I made"
+keyword: "Blog,Python,Go,Java,TypeScript"
 header-img: img/header_img/newhome_bg.jpg
 archives-img: img/header_img/archive_bg2.jpg
 
@@ -62,19 +61,19 @@ wave: true
 
 # SNS Settings
 # RSS: true
-github_username: V-Vincen
-twitter_username: V_Vincen_
-instagram_username: v_vincen_
+github_username: innovationb1ue
+# twitter_username: V_Vincen_
+# instagram_username: v_vincen_
 # facebook_username:  yourAccount
 # linkedin_username:  yourAccount
 # zhihu_username: WVincen
-weibo_username: WVincen
+# weibo_username: WVincen
 
 
 # Sidebar Settings
 sidebar: true   # whether or not using Sidebar.
-sidebar-about-description: "Fat people have no future, either thin or die..."
-sidebar-avatar: img/avatar/fatpeople.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Lying down with faith and hope"
+sidebar-avatar: img/avatar/lying.png    # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - visitor   # busuanzi: https://busuanzi.ibruce.info/
 - featured-tags
@@ -96,19 +95,19 @@ featured-condition-size: 0    # A tag will be featured if the size of it is more
 
 ## Friends
 friends: [
-    {
-        title: "V_Vincen",
-        href: "https://v-vincen.life/"
-    },{
-        title: "Bean Tech",
-        href: "http://beantech.org"
-    },{
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    },{
-        title: "Hexo",
-        href: "https://hexo.io/"
-    }
+    # {
+    #     title: "V_Vincen",
+    #     href: "https://v-vincen.life/"
+    # },{
+    #     title: "Bean Tech",
+    #     href: "http://beantech.org"
+    # },{
+    #     title: "Hux Blog",
+    #     href: "http://huangxuan.me"
+    # },{
+    #     title: "Hexo",
+    #     href: "https://hexo.io/"
+    # }
 ]
 
 
@@ -318,27 +317,27 @@ themecolor:
 
 # Mouseclick config
 mouseclick:
-  enable: true
-  content:
-    - The first step is as good as half over...
-    - Laugh and grow fat...
-    - Man proposes God disposes...
-    - When all else is lost the future still remains...
-    - Wasting time is robbing oneself...
-    - Sharp tools make good work...
-    - Cease to struggle and you cease to live...
-    - A friend in need is a friend indeed...
-    - Faith can move mountains...
-  color:
-    - '#9933CC'
-    - '#339933'
-    - '#66CCCC'
-    - '#FF99CC'
-    - '#CCCCFF'
-    - '#6666CC'
-    - '#663399'
-    - '#66CC99'
-    - '#FF0033'
+  # enable: true
+  # content:
+  #   - The first step is as good as half over...
+  #   - Laugh and grow fat...
+  #   - Man proposes God disposes...
+  #   - When all else is lost the future still remains...
+  #   - Wasting time is robbing oneself...
+  #   - Sharp tools make good work...
+  #   - Cease to struggle and you cease to live...
+  #   - A friend in need is a friend indeed...
+  #   - Faith can move mountains...
+  # color:
+  #   - '#9933CC'
+  #   - '#339933'
+  #   - '#66CCCC'
+  #   - '#FF99CC'
+  #   - '#CCCCFF'
+  #   - '#6666CC'
+  #   - '#663399'
+  #   - '#66CC99'
+  #   - '#FF0033'
 
 
 # Ribbon config
