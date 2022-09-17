@@ -189,13 +189,13 @@ If you don’t want to display it, you can delete it directly.
 ```yml
 # SNS settings
 # RSS: true
-github_username: V-Vincen
-twitter_username: V_Vincen_
-instagram_username: V_Vincen_
+github_username: innovationb1ue
+# twitter_username: V_Vincen_
+# instagram_username: V_Vincen_
 # facebook_username:  yourAccount
 # linkedin_username:  yourAccount
 # zhihu_username: yourAccount
-weibo_username: WVincen
+# weibo_username: WVincen
 ```
 
 ### Sidebar Settings
