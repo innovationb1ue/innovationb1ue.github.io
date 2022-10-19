@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://innovationb1ue.github.io/categories/index.html</loc>
+    <loc>http://innovationb1ue.github.io/404.html</loc>
     
     <lastmod>2022-10-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://innovationb1ue.github.io/404.html</loc>
+    <loc>http://innovationb1ue.github.io/categories/index.html</loc>
     
     <lastmod>2022-10-19</lastmod>
     
@@ -43,20 +43,6 @@
     
   </url>
   
-  <url>
-    <loc>http://innovationb1ue.github.io/cn/cn-Hexo-Theme-LiveMyLife/</loc>
-    
-    <lastmod>2020-04-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://innovationb1ue.github.io/undefined/en-Hexo-Theme-LiveMyLife/</loc>
-    
-    <lastmod>2020-04-17</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>http://innovationb1ue.github.io/</loc>
@@ -67,7 +53,21 @@
 
   
   <url>
-    <loc>http://innovationb1ue.github.io/tags/Hexo-Theme-LiveMyLife/</loc>
+    <loc>http://innovationb1ue.github.io/tags/Golang/</loc>
+    <lastmod>2022-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://innovationb1ue.github.io/tags/Redis/</loc>
+    <lastmod>2022-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://innovationb1ue.github.io/tags/RedisGO/</loc>
     <lastmod>2022-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -76,7 +76,7 @@
 
   
   <url>
-    <loc>http://innovationb1ue.github.io/categories/Hexo-Theme-LiveMyLife/</loc>
+    <loc>http://innovationb1ue.github.io/categories/category1/</loc>
     <lastmod>2022-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
