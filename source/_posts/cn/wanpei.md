@@ -3,9 +3,13 @@ title: wanpei
 catalog: true
 date: 2022-09-17 23:01:03
 subtitle:
-header-img:
+header-img: image-20220917205825912.png
 tags:
+- Golang
+- Redis
+- RedisGO
 categories:
+- category1
 ---
 
 ### 玩配 - 20220917 登陆前后端联调 + 匹配入口 + 用户添加游戏tags
