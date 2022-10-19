@@ -38,9 +38,9 @@ permalink_defaults:
 # Custom Setting Start
 
 # Site settings
-SEOTitle: innovationb1ue blog
+SEOTitle: 奇妙Land
 email: realjeffblue@gmail.com
-description: "Record every step I made"
+description: "ok"
 keyword: "Blog,Python,Go,Java,TypeScript"
 header-img: img/header_img/newhome_bg.jpg
 archives-img: img/header_img/archive_bg2.jpg
@@ -181,7 +181,7 @@ skip_render:
 
 
 # Writing
-new_post_name: :lang/:title.md    # File name of new posts
+new_post_name: :year-:month-:day-:title/:title.md    # File name of new posts
 default_layout: post
 auto_spacing: true
 titlecase: false    # Transform title into titlecase
