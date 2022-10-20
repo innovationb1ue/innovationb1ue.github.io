@@ -60,6 +60,13 @@
   </url>
   
   <url>
+    <loc>http://innovationb1ue.github.io/tags/GO/</loc>
+    <lastmod>2022-10-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://innovationb1ue.github.io/tags/Redis/</loc>
     <lastmod>2022-10-20</lastmod>
     <changefreq>daily</changefreq>
