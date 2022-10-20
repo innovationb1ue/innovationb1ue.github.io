@@ -6,8 +6,7 @@ subtitle:
 header-img: image-20220917205825912.png
 tags:
 - Golang
-- Redis
-- RedisGO
+
 categories:
 - category1
 ---
