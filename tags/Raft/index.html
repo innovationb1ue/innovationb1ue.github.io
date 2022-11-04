@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://innovationb1ue.github.io/undefined/redisgo/">
+  <link rel="canonical" href="http://innovationb1ue.github.io/tags/Raft/">
   <title>
     
-      RedisGo - 一个Go编写的高性能Redis服务器 - 奇妙Land
+      奇妙Land
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -289,7 +289,29 @@
           <!-- LangSelect -->
           
           
-          
+          <!-- LangSelect start -->
+          <!-- LangSelect -->
+<li>
+  <a id="lang-select-label"><i class="fa fa-globe"></i>
+    <span>
+      English
+    </span>
+    <select id="lang-select" data-canonical="tags/Raft/index.html">
+      
+      
+      <option value="en"  selected >
+        English
+      </option>
+      
+      <option value="cn" >
+        简体中文
+      </option>
+      
+    </select>
+  </a>
+</li>
+
+          <!-- LangSelect end -->
           
           
         </ul>
@@ -351,9 +373,9 @@
     }
 
     header.intro-header {
-       /*post*/
-        background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url(''); */
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -375,48 +397,10 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="post-heading">
-            <div class="tags">
-              
-              <a class="tag" href="/tags/#Golang" title="Golang">Golang</a>
-              
-              <a class="tag" href="/tags/#GO" title="GO">GO</a>
-              
-              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
-              
-              <a class="tag" href="/tags/#RedisGO" title="RedisGO">RedisGO</a>
-              
-            </div>
-            <h1>RedisGo - 一个Go编写的高性能Redis服务器</h1>
-            <h2 class="subheading"></h2>
-            <span class="meta">
-              Posted by Jeff Zhong on
-              2022-10-19
-            </span>
-
-
-            
-            <!-- WordCount start -->
-            <div class="blank_box"></div>
-            <span class="meta">
-              Estimated Reading Time <span class="post-count">3</span> Minutes
-            </span>
-            <div class="blank_box"></div>
-            <span class="meta">
-              Words <span class="post-count">667</span> In Total
-            </span>
-            <div class="blank_box"></div>
-            <!-- WordCount end -->
-            
-            
-            <!-- 不蒜子统计 start -->
-            <span class="meta" id="busuanzi_container_page_pv">
-              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
-            </span>
-            <!-- 不蒜子统计 end -->
-            
-
-
+          <div class="site-heading">
+            <h1>Secret island</h1>
+            <!--<hr class="small">-->
+            <span class="subheading">in the best way you can</span>
           </div>
           
         </div>
@@ -457,439 +441,259 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Modify by Yu-Hsuan Yen -->
-<!-- Post Content -->
-<article>
-  <div class="container">
-    <div class="row">
-      <!-- Post Container -->
-      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+		<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    
 
-        <h4 id="Intro">Intro</h4>
-<p>Project Redisgo <a target="_blank" rel="noopener" href="https://www.github.com/innovationb1ue/redisgo">Github</a></p>
-<p>一个使用Go编写的Redis Server服务端。完全实现Redis serialization protocol (RESP) specification。保证了支持任何语言规范的Client。性能达到原C-Redis的80%-95% (根据命令与平台不同可能会有所差异)</p>
-<h4 id="Code-base">Code base</h4>
-<p>改编自<a target="_blank" rel="noopener" href="https://github.com/VincentFF/thinredis">ThinRedis</a>，原作者实现了一部分基础命令的RESP。RedisGO从<a target="_blank" rel="noopener" href="https://github.com/VincentFF/thinredis/tree/86fa648426da7e9c3ff4c04aef1e43f1fdc7b1ac">这个</a>版本开始进行优化与功能添加，优化了登陆处理与命令执行逻辑, 并且添加了更多的数据结构与命令支持。</p>
-<h4 id="Benchmark">Benchmark</h4>
-<p>Benchmark result is based on <a target="_blank" rel="noopener" href="https://redis.io/topics/benchmarks">redis-benchmark</a> tool.<br>
-Testing on MacBook Pro 2021 with M1 pro, 16.0 GB RAM, and on macOS Monterey.</p>
-<p>The first one is RedisGO result and the second is from Redis.<br>
-Note that this result could vary tremendously. Generally we say we reach 80-90% of the original C Redis performance.<br>
-<code>benchmark -c 50 -n 200000 -t [get|set|...] -q</code></p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SET: 176678.45   requests per second, p50=0.143 msec                    </span><br><span class="line">GET: 187969.92 requests per second, p50=0.151 msec                    </span><br><span class="line">INCR: 186741.36 requests per second, p50=0.135 msec                    </span><br><span class="line">LPUSH: 173611.12 requests per second, p50=0.143 msec                    </span><br><span class="line">RPUSH: 161943.31 requests per second, p50=0.143 msec                    </span><br><span class="line">LPOP: 187265.92 requests per second, p50=0.135 msec                    </span><br><span class="line">RPOP: 186915.88 requests per second, p50=0.135 msec                    </span><br><span class="line">SADD: 186915.88 requests per second, p50=0.135 msec                    </span><br><span class="line">HSET: 185873.61 requests per second, p50=0.143 msec                    </span><br><span class="line">SPOP: 188501.42 requests per second, p50=0.135 msec                    </span><br><span class="line">MSET (10 keys): 139275.77 requests per second, p50=0.199 msec    </span><br></pre></td></tr></table></figure>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SET: 185873.61 requests per second, p50=0.135 msec                    </span><br><span class="line">GET: 185528.77 requests per second, p50=0.127 msec                    </span><br><span class="line">INCR: 183992.64 requests per second, p50=0.135 msec                    </span><br><span class="line">LPUSH: 205338.81 requests per second, p50=0.135 msec                    </span><br><span class="line">RPUSH: 208116.55 requests per second, p50=0.135 msec                    </span><br><span class="line">LPOP: 197238.64 requests per second, p50=0.135 msec                    </span><br><span class="line">RPOP: 197628.47 requests per second, p50=0.135 msec                    </span><br><span class="line">SADD: 201409.88 requests per second, p50=0.135 msec                    </span><br><span class="line">HSET: 201409.88 requests per second, p50=0.135 msec                    </span><br><span class="line">SPOP: 212765.95 requests per second, p50=0.127 msec                    </span><br><span class="line">MSET (10 keys): 181323.66 requests per second, p50=0.199 msec </span><br></pre></td></tr></table></figure>
-<h4 id="Support-Commands">Support Commands</h4>
-<p>All commands used as <a target="_blank" rel="noopener" href="https://redis.io/commands/">redis commands</a>. You can use any redis client to communicate with RedisGO.</p>
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>string</th>
-<th>list</th>
-<th>set</th>
-<th>hash</th>
-<th>channels</th>
-<th>sorted set</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>del</td>
-<td>set</td>
-<td>llen</td>
-<td>sadd</td>
-<td>hdel</td>
-<td>subscribe</td>
-<td>zadd</td>
-</tr>
-<tr>
-<td>exists</td>
-<td>get</td>
-<td>lindex</td>
-<td>scard</td>
-<td>hexists</td>
-<td>publish</td>
-<td>zrange*</td>
-</tr>
-<tr>
-<td>keys</td>
-<td>getrange</td>
-<td>lpos</td>
-<td>sdiff</td>
-<td>hget</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>expire</td>
-<td>setrange</td>
-<td>lpop</td>
-<td>sdirrstore</td>
-<td>hgetall</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>persist</td>
-<td>mget</td>
-<td>rpop</td>
-<td>sinter</td>
-<td>hincrby</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ttl</td>
-<td>mset</td>
-<td>lpush</td>
-<td>sinterstore</td>
-<td>hincrbyfloat</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>type</td>
-<td>setex</td>
-<td>lpushx</td>
-<td>sismember</td>
-<td>hkeys</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>rename</td>
-<td>setnx</td>
-<td>rpush</td>
-<td>smembers</td>
-<td>hlen</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>strlen</td>
-<td>rpushx</td>
-<td>smove</td>
-<td>hmget</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>incr</td>
-<td>lset</td>
-<td>spop</td>
-<td>hset</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>incrby</td>
-<td>lrem</td>
-<td>srandmember</td>
-<td>hsetnx</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>decr</td>
-<td>ltrim</td>
-<td>srem</td>
-<td>hvals</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>decrby</td>
-<td>lrange</td>
-<td>sunion</td>
-<td>hstrlen</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>incrbyfloat</td>
-<td>lmove</td>
-<td>sunionstore</td>
-<td>hrandfield</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>append</td>
-<td>blpop</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>brpop</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>*means partially implemented or is being worked on.</p>
-<h4 id="TODO">TODO</h4>
-<ul>
-<li>实现所有的Redis命令。目标接近100%原Redis性能，在部分命令上实现超越性能。</li>
-<li>精细的内存管理。原Redis一旦分配内存将<a target="_blank" rel="noopener" href="https://redis.io/docs/reference/optimization/memory-optimization/">不会主动释放内存</a>给OS。得益于Go的自动GC（Garbage colleciton），我们只要注意不要编写内存泄漏的代码,GC会代替我们清理所有的垃圾。在Key被销毁后，RedisGO占用的内存将会被释放，系统中的其他应用将有机会使用更多的内存。这在原Redis中是不可能的。</li>
+    <!-- USE SIDEBAR -->
+    <!-- Post Container -->
+    <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+      <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
+
+      
+
+      <!-- 归档列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2022">
+          <span class="tag-text">2022</span>
+        </span>
+        <ul>
+          
+          <li>
+            11-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/Algorithm/" style="color: #0085a1">
+              <span>
+                Raft Consensus Alglorithm
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/redisgo/" style="color: #0085a1">
+              <span>
+                RedisGo - 一个Go编写的高性能Redis服务器
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/cn-wanpei/" style="color: #0085a1">
+              <span>
+                wanpei
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+      <!-- 如果开启评论功能 -->
+      
+    </div>
+
+    <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Visitors -->
+<h5><a href="/">VISITORS</a></h5>
+
+<div class="widget">
+  <span>
+    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+  </span>
+  <br />
+  <span>
+    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
+  </span>
+</div>
+
+
+        <hr>
+    
+        <!-- Featured Tags -->
+
+<section>
+  <h5><a href="/tags/">FEATURED TAGS</a></h5>
+  <div class="tags">
+    
+    
+    <a href="/tags/#Golang" title="Golang" rel="2">Golang</a>
+    
+    
+    
+    <a href="/tags/#GO" title="GO" rel="1">GO</a>
+    
+    
+    
+    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#RedisGO" title="RedisGO" rel="1">RedisGO</a>
+    
+    
+    
+    <a href="/tags/#Raft" title="Raft" rel="1">Raft</a>
+    
+    
+  </div>
+</section>
+
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+  <h5><a href="/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+
+    
+    <img id="avatar_pic" src="/img/avatar/lying.png" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
+    
+
+    
+    <p>Lying down with faith and hope</p>
+    
+
+    <!-- SNS Link -->
+    <ul class="list-inline">
+      
+
+      
+      <li>
+        <a target="_blank" href="https://github.com/innovationb1ue">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+    </ul>
+  </div>
+</section>
+
+        <hr>
+    
+        <!-- RECENT POSTS -->
+
+<h5><a href="/">RECENT POSTS</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="../../undefined/Algorithm/">
+      <li>Raft Consensus Alglorithm</li>
+    </a>
+    
+    <a href="../../undefined/redisgo/">
+      <li>RedisGo - 一个Go编写的高性能Redis服务器</li>
+    </a>
+    
+    <a href="../../undefined/cn-wanpei/">
+      <li>wanpei</li>
+    </a>
+    
+  </ul>
+</div>
+
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5><a href="/">FRIENDS</a></h5>
+<ul class="list-inline">
+  
 </ul>
 
 
         <hr>
-        <!-- Pager -->
-        <ul class="pager">
-          
-          <li class="previous">
-            <a href="/undefined/Algorithm/" data-toggle="tooltip" data-placement="top" title="Raft Consensus Alglorithm">&larr; Previous Post</a>
-          </li>
-          
-          
-          <li class="next">
-            <a href="/undefined/cn-wanpei/" data-toggle="tooltip" data-placement="top" title="wanpei">Next Post &rarr;</a>
-          </li>
-          
-        </ul>
+    
+        <!-- Archives -->
 
-        
-        <!-- tip start -->
-        <!-- tip -->
-<!-- tip start -->
-<div class="tip">
-  <p>
-    
-      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
-    
-  </p>
+<h5><a href="/archives/">archives</a></h5>
+<div class="widget">
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/11/">November 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/10/">October 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/09/">September 2022</a><span class="archive-list-count">1</span></li></ul>
 </div>
-<!-- tip end -->
 
-        <!-- tip end -->
-        
 
-        
-        <!-- Sharing Srtart -->
-        <!-- Social Social Share Post -->
-<!-- Docs:https://github.com/overtrue/share.js -->
+        <hr>
+    
+        <!-- Categories -->
 
-<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
-  <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-twitter">
-        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a class="social-share-icon icon-wechat">
-        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-weibo">
-        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-qq">
-        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=RedisGo - 一个Go编写的高性能Redis服务器&body=Hi,I found this website and thought you might like it http://innovationb1ue.github.io/undefined/redisgo/">
-        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
+<h5><a href="/categories/">categories</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="/categories/#category1">
+      <li>category1</li>
+    </a>
+    
   </ul>
 </div>
 
-<!-- css & js -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
-<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
-        <!-- Sharing End -->
-        
         <hr>
+    
+</div>
 
-        <!-- comments start -->
-        <!-- 1. gitalk comment -->
-
-  <!-- gitalk start -->
-  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
-
-  <div id="gitalk-container"></div>
-
-  
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
-    <script src="/js/comment/gitalk.js"></script>
-  
-
-  <script>
-    var gitalk = new Gitalk({
-      clientID: '',
-      clientSecret: '',
-      repo: '',
-      owner: '',
-      admin: '',
-      id: 'Wed Oct 19 2022 18:21:21 GMT+0000', // Ensure uniqueness and length less than 50
-      distractionFreeMode: false, // Facebook-like distraction free mode
-      perPage: 10,
-      pagerDirection: 'last',
-      createIssueManually: false,
-      language: 'en',
-      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
-    });
-    gitalk.render('gitalk-container');
-
-    var gtFolded = () => {
-      setTimeout(function () {
-        let markdownBody = document.getElementsByClassName("markdown-body");
-        let list = Array.from(markdownBody);
-        list.forEach(item => {
-          if (item.clientHeight > 250) {
-            item.classList.add('gt-comment-body-folded');
-            item.style.maxHeight = '250px';
-            item.title = 'Click to Expand';
-            item.onclick = function () {
-              item.classList.remove('gt-comment-body-folded');
-              item.style.maxHeight = '';
-              item.title = '';
-              item.onclick = null;
-            };
-          }
-        })
-      }, 800);
-    }
-  </script>
-
-  <!-- gitalk end -->
-
-
-<!-- 2. gitment comment -->
-
-
-<!-- 3. disqus comment -->
-
-
-        <!-- comments end -->
-        <hr>
-
-      </div>
-
-      <!-- Catalog: Tabe of Content -->
-      <!-- Table of Contents -->
 
     
-      <aside id="sidebar">
-        <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Intro"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Intro</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Code-base"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Code base</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Benchmark"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Benchmark</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Support-Commands"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Support Commands</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TODO"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">TODO</span></a></li></ol>
-        
-        </div>
-      </aside>
-    
-
-
-
-      <!-- Sidebar Container -->
-      <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-        <!-- Featured Tags -->
-        
-        <section>
-          <!-- no hr -->
-          <h5>
-            <a href="/tags/">FEATURED TAGS</a>
-          </h5>
-          <div class="tags">
-            
-            <a class="tag" href="/tags/#Golang" title="Golang">Golang</a>
-            
-            <a class="tag" href="/tags/#GO" title="GO">GO</a>
-            
-            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
-            
-            <a class="tag" href="/tags/#RedisGO" title="RedisGO">RedisGO</a>
-            
-          </div>
-        </section>
-        
-
-        <!-- Friends Blog -->
-        
-        <hr>
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-
-          
-        </ul>
-        
-      </div>
-    </div>
   </div>
-</article>
-
-
-
-<!-- anchorjs start -->
-<!-- async load function -->
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script type="text/javascript">
-  // async load function
-  function async (u, c) {
-    var d = document,
-      t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) {
-      o.addEventListener('load', function(e) {
-        c(null, e);
-      }, false);
-    }
-    s.parentNode.insertBefore(o, s);
-  };
-</script>
-<script type="text/javascript">
-  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
-  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
-    anchors.options = {
-      visible: 'hover',
-      placement: 'left',
-      // icon: 'ℬ'
-      icon: '❡'
-    };
-    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-  });
-</script>
-<style>
-  /* place left on bigger screen */
-  @media all and (min-width: 800px) {
-    .anchorjs-link {
-      position: absolute;
-      left: -0.75em;
-      font-size: 1.1em;
-      margin-top: -0.1em;
-    }
-  }
-</style>
-
-<!-- anchorjs end -->
-
+</div>
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
