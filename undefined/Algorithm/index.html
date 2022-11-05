@@ -393,11 +393,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">2</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">277</span> In Total
+              Words <span class="post-count">445</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -459,26 +459,34 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p><a target="_blank" rel="noopener" href="https://raft.github.io/raft.pdf">The Paper</a></p>
-<p><img src="Algorithm/image-20221103111102300.png" alt="image-20221103111102300"></p>
+        <p>Link to the algorithm paper: <a target="_blank" rel="noopener" href="https://raft.github.io/raft.pdf">The Paper</a></p>
+<p><img src="./image-20221103111102300.png" alt=""></p>
 <p>Learn raft through this blog</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/eliben/raft">https://github.com/eliben/raft</a></p>
-<p><code>ConsensusModule</code> is the core raft struct (<strong>CM</strong>). It forms a basic Node in raft.</p>
+<p>ConsensusModule is the core raft struct (<strong>CM</strong>). It forms a basic Node in raft.</p>
+<h5 id="What-problem-does-this-solve">What problem does this solve?</h5>
+<p>Disaster tolerance in the distributed system such as Redis sentinel mode. Whenever a node fails, another node becomes the master and provides consistent data. In the price that a write command now has to be replicated to all the nodes in the cluster and only after the majority of nodes save that the command, we can say that command is “committed”.</p>
+<h5 id="How-it-works">How it works</h5>
+<p>Only the leader can save new logs. Once the leader receives a command, it replicated that to all his followers. Each follower maintains a timer which will lead to the election and only the one with the most consistent log with the majority should win the election and become a new leader.</p>
 <h5 id="How-a-client-finds-a-leader">How a client finds a leader?</h5>
-<h5 id="Start-Process">Start Process</h5>
+<p>peer ID and RPCs are used to communicate replicas and leaders.</p>
+<h5 id="Nodes-Start-Process">Nodes Start Process</h5>
 <ol>
 <li>Initialize Nodes (n = 3)</li>
 <li>start the election timers all together</li>
-<li>one will become leader and add 1 to term. Others become followers.</li>
+<li>one will become the leader and add 1 to the term. Others become followers.</li>
+<li>Start handling submits.</li>
 </ol>
-<h5 id=""></h5>
 <h5 id="RPC-round-trips-to-commit-a-new-command">RPC round-trips to commit a new command</h5>
+<p>Simple answer: 2</p>
 <p><strong>Q:</strong> How many RPC round-trips does it take to commit a new command?</p>
-<p><strong>A:</strong> Two. First round for the leader to send the next log entries to followers and for the followers to acknowledge them. When the leader processes a reply to an AE, it may update its commit index based on the response. The second round will send an updated commit index to followers, who will then mark these entries as committed and will send them on the commit channel. As an exercise, go back to the code snippets above and find the pieces of code that implement these steps.</p>
-<h4 id="Election-safety">Election safety</h4>
-<p>When a runaway server reconnects to the cluster, it might come back with higher term and start an election.</p>
-<p>So the normal leader in the cluster will become its follower but the comeback server won’t win the election due to failure in completeness check. A winner has to win the majority of votes in the cluster with higher term (satisfied) and complete more log(not satisfied).</p>
-<p>This is because when a server disconnected from the cluster, it won’t be able to get new logs anymore since it won’t win election and become a leader. It starts self-spinning and get higer terms but no more logs.</p>
+<p><strong>A:</strong> Two. The first round is for the leader to send the next log entries to followers and for the followers to acknowledge them. When the leader processes a reply to an AE, it may update its commit index based on the response. The second round will send an updated commit index to followers, who will then mark these entries as committed and will send them on the commit channel. As an exercise, go back to the code snippets above and find the pieces of code that implement these steps.</p>
+<h5 id="Election-safety">Election safety</h5>
+<p>When a runaway server reconnects to the cluster, it might come back with a higher term and start an election.</p>
+<p>So the normal leader in the cluster will become its follower but the comeback server won’t win the election due to failure in the completeness check. A winner has to win the majority of votes in the cluster with a higher term (satisfied) and complete more logs (not satisfied).</p>
+<p>This is because when a server disconnected from the cluster, it won’t be able to get new logs anymore since it won’t win the election and become a leader. It starts self-spinning and gets higher terms but no more logs.</p>
+<h5 id="Persistence">Persistence</h5>
+<p>Persistence states in the figure should be flushed with every write. This could be optimized.</p>
 
 
         <hr>
