@@ -6,6 +6,7 @@ subtitle: CMU15445-2022FALL
 header-img:
 tags:
 categories: Learn
+typora-root-url: ./DB-Storage
 ---
 
 ## Storage
