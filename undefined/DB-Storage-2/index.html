@@ -395,7 +395,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">76</span> In Total
+              Words <span class="post-count">183</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -467,6 +467,30 @@
 <li><strong>Useless Disk I/O.</strong> We need to bring entire page in when we want only a tuple inside.</li>
 <li><strong>Random Disk I/O.</strong>  (Update 20 tuples in 20 pages, read them all in and write them back out)</li>
 </ul>
+<h2 id="Log-Structure-Storage">Log Structure Storage</h2>
+<p>DBMS stores log record that contain changes to tuples (<strong>PUT</strong>, <strong>DELETE</strong>).</p>
+<p><img src="./DB-Storage-2/image-20230126120130387.png" alt="image-20230126120130387"></p>
+<p>Whenever the page is full, we write the page into the disk.</p>
+<ul>
+<li>All disk writes are sequential.</li>
+<li>On-disk pages are immutable.</li>
+</ul>
+<h4 id="Read">Read</h4>
+<p>Read a tuple:</p>
+<ul>
+<li>
+<p>scan the log from newest to oldest for the tuple ID and values.</p>
+<p>or</p>
+</li>
+<li>
+<p>Maintain an index that map a tuple ID to the newest log record.</p>
+</li>
+</ul>
+<h4 id="Compaction">Compaction</h4>
+<p>The log grows forever. So we need to merge pages and consilidate them periodically.</p>
+<p>After a page is compacted, each tuple id is guaranteed to appear at most once in the page.</p>
+<p>Sort the page.</p>
+<p>Sorted String Tables (SSTables)</p>
 
 
         <hr>
@@ -612,7 +636,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Disk-Oriented-Arch"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Disk-Oriented Arch</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Page-Oriented-Arch"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Page-Oriented Arch</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Disk-Oriented-Arch"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Disk-Oriented Arch</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Page-Oriented-Arch"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Page-Oriented Arch</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Log-Structure-Storage"><span class="toc-nav-number"></span> <span class="toc-nav-text">Log Structure Storage</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Read"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Read</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Compaction"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Compaction</span></a></li></ol>
         
         </div>
       </aside>
