@@ -2,23 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://innovationb1ue.github.io/undefined/DB-Storage-2/</loc>
+    
+    <lastmod>2023-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://innovationb1ue.github.io/undefined/DB-Storage/</loc>
+    
+    <lastmod>2023-01-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://innovationb1ue.github.io/tags/index.html</loc>
     
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     
   </url>
   
   <url>
     <loc>http://innovationb1ue.github.io/categories/index.html</loc>
     
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     
   </url>
   
   <url>
     <loc>http://innovationb1ue.github.io/404.html</loc>
     
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://innovationb1ue.github.io/undefined/Embedding1/</loc>
+    
+    <lastmod>2022-11-06</lastmod>
     
   </url>
   
@@ -53,7 +74,7 @@
 
   <url>
     <loc>http://innovationb1ue.github.io/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,35 +82,35 @@
   
   <url>
     <loc>http://innovationb1ue.github.io/tags/Golang/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://innovationb1ue.github.io/tags/GO/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://innovationb1ue.github.io/tags/Redis/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://innovationb1ue.github.io/tags/RedisGO/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://innovationb1ue.github.io/tags/Raft/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -97,8 +118,22 @@
 
   
   <url>
+    <loc>http://innovationb1ue.github.io/categories/Learn/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://innovationb1ue.github.io/categories/Learn/DB/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://innovationb1ue.github.io/categories/category1/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2023-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
